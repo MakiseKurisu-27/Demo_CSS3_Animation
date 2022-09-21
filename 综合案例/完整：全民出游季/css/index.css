@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center 0;
+
+    /* 缩放背景图 */
+
+    /* 图片等比例缩放, 当宽度或高度和盒子尺寸相等, 图片就不再缩放 */
+    background-size: contain;
+    
+    /* 图片等比例缩放, 图片完全覆盖到整个盒子, 可能会导致图片显示不全 */
+    background-size: cover;
+}
+
+/* 
+    1. img 引入图片, 控制位置
+    2. 定义动画, 使用动画
+*/
+
+.cloud img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.cloud img:nth-child(1) {
+    margin-left: -300px;
+    top: 20px;
+    animation: cloud 1s linear infinite alternate;
+}
+.cloud img:nth-child(2) {
+    margin-left: 400px;
+    top: 100px;
+    animation: cloud 1s linear infinite 1s alternate;
+}
+.cloud img:nth-child(3) {
+    margin-left: -550px;
+    top: 200px;
+    animation: cloud 1.5s linear infinite 1s alternate;
+}
+
+/* 云彩动画 */
+@keyframes cloud {
+    to {
+        transform: translateX(20px);
+    }
+}
+
+/* 底部四图 */
+.jump img {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    width: 100px;
+}
+
+.jump img:nth-child(1) {
+    margin-left: -415px;
+
+    animation: jump .4s linear infinite alternate;
+}
+.jump img:nth-child(2) {
+    margin-left: -177px;
+    animation: jump .4s linear infinite .3s alternate;
+}
+.jump img:nth-child(3) {
+    margin-left: 60px;
+    animation: jump .4s linear infinite .6s alternate ;
+}
+.jump img:nth-child(4) {
+    margin-left: 300px;
+    animation: jump .4s linear infinite .9s alternate;
+}
+
+/* 底部四图动画 */
+@keyframes jump {
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+/* 热气球 */
+.balloon img {
+    position: absolute;
+    top: 100px;
+    left: 25%;
+
+    animation: balloon 2s linear infinite alternate;
+}
+
+/* 热气球动画 */
+@keyframes balloon {
+    to {
+        transform: translateY(30px);
+    }
+}
+
+/* 鹿 */
+.deer img {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+}

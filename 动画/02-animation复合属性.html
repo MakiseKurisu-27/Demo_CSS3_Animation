@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            /* 一、 速度曲线 */
+            /* liner: （看不出变化效果） */
+            /* animation: change 1s linear; */
+
+            /* 速度曲线--分步动画: */
+            /* steps(数值) 数值用于说明几步完成 */
+            /* 分成三等分执行 */
+            animation: change 1s steps(3);
+
+            /* 二、延迟时间 */
+            /* animation: change 1s steps(3) 1s; */
+
+            /* 三、重复次数 */
+            /* 3: 重复3次播放 */
+            /* animation: change 1s steps(3) 1s 3; */
+
+            /* 无限循环: infinite */
+            /* animation: change 1s steps(3) infinite; */
+            
+            /* 四、动画方向 */
+            /* 动画方向反向执行: alternate */
+            /* animation: change 1s infinite alternate; */
+
+            /* 五、执行完毕时状态: */
+            /* 默认值 */
+            /* animation: change 1s backwards; */
+
+            /* 动画停留在结束的状态 */
+            animation: change 1s forwards;
+
+        }
+
+        @keyframes change {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 600px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

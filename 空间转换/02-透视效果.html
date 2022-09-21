@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>透视效果</title>
+  <style>
+    body {
+      /* 透视: 视距; */
+      perspective: 1000px;
+
+      /* 无论是过小还是过大，都不适合于人去看 */
+      perspective: 200px;
+      perspective: 10000px;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 100px auto;
+      background-color: pink;
+      transition: all 0.5s;
+    }
+
+    /* 使用空间转换，其父元素需要添加 透视: perspective: 800-1200 (px) */
+    .box:hover{
+      transform: translateZ(100px);
+      transform: translateZ(-100px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>
